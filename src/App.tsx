@@ -12,7 +12,7 @@ interface Enemy {
 const ALL_ENEMIES: Enemy[] = [
   { name: "Goomba", sprite: "🍄", threat: true, desc: "Dangerous! Walking mushroom.\nShoot before it reaches you!" },
   { name: "Koopa", sprite: "🐢", threat: true, desc: "Dangerous! Turtle shell charge.\nTake it out fast!" },
-  { name: "Boo", sprite: "👻", threat: false, desc: "Harmless... only moves when\nyou look away. Save your bullet!" },
+  { name: "Boo", sprite: "👻", threat: false, desc: "Harmless... only moves when\nyou look away. Save your shot!" },
   { name: "Star", sprite: "⭐", threat: false, desc: "Harmless! A power-up star.\nDon't shoot it!" },
   { name: "Piranha Plant", sprite: "🌿", threat: true, desc: "Dangerous! Chomps everything.\nBlast it now!" },
   { name: "Lakitu", sprite: "☁️", threat: true, desc: "Dangerous! Throws Spinies.\nShoot before it rains!" },
@@ -119,7 +119,7 @@ export default function App() {
                 <div>{score.toString().padStart(3, '0')}</div>
               </div>
               <div className="text-center hidden sm:block">
-                <div className="text-sky-300 mb-1">BULLET</div>
+                <div className="text-sky-300 mb-1">SHOT</div>
                 <div>{gameState === 'PLAYING' ? '🔵' : <span className="opacity-30">🔵</span>}</div>
               </div>
               <div className="text-center">
@@ -168,10 +168,10 @@ export default function App() {
                     transition={{ repeat: Infinity, duration: 2, repeatType: "reverse" }}
                     className="text-4xl md:text-5xl text-sky-400 mb-4"
                   >
-                    ONE<br/>BULLET
+                    SHOOT THE<br/>KURUVI
                   </motion.div>
                   <p className="text-[10px] md:text-xs leading-relaxed text-sky-100 mb-8 max-w-xs mx-auto">
-                    You have one bullet per wave.
+                    You have one shot per wave.
                     <br/><br/>
                     Enemies appear one by one.
                     Some are dangerous, some are harmless.
