@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-retro: "Press Start 2P", ui-monospace, monospace;
+}
+
+body {
+  background-color: #0f172a; /* slate-900 */
+}
+
+/* Custom retro styling for the game borders */
+.retro-border {
+  box-shadow: 
+    inset -4px -4px 0px 0px rgba(0, 0, 0, 0.4),
+    inset 4px 4px 0px 0px rgba(255, 255, 255, 0.4);
+}
+
+.retro-border-active:active {
+  box-shadow: 
+    inset 4px 4px 0px 0px rgba(0, 0, 0, 0.4),
+    inset -4px -4px 0px 0px rgba(255, 255, 255, 0.4);
+  transform: translateY(2px);
+}
